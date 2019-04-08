@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        
+		<title>Trabalho Estatistica</title>
+		<link rel="icon" type="image/png" href="favicon.png">
+		<meta name="description" content="HTML + CSS + JS - Trabalho de estatistica"
+		<meta name="author" content="Luis Felipe Manfroni">
+        <script src="./probEst.js"></script>
+        <link rel='stylesheet' href='./water.css'>
+		</head>
+	<body>
+		<noscript>
+		  É necessário habilitar o javascript para ver esta aplicação.
+		</noscript>
+        
+        
+        <h1>Probabilidade e Estatística</h1>
+
+		<hr />
+
+        <table>
+            <tr>
+				<td>Amplitude do intervalo (h):</td>
+				<td><input id='h' type="number" min="1" max="2000000" value='100' /></td>
+			</tr>
+			<tr>
+				<td>Total de classes (k):</td>
+				<td><input id='k' type="number" min="1" max="2000000" value='4' /></td>
+			</tr>
+			<tr>
+				<td>Primeiro limite inferior (Li1):</td>
+				<td><input id='li1' type="number" min="1" max="2000000" value='450' /></td>
+			</tr>
+		</table>
+		
+		<button onclick="criarTabelaFrequencia()">Gerar Tabela de Frequência</button>
+
+		<hr />
+
+		<table class="light" style="margin-top: 18px;">
+			<thead>
+				<tr>
+					<th>Custo (R$)</th>
+					<th>fi</th>
+					<th>xi</th>
+				</tr>
+			</thead>
+			<tbody id="tabelaFrequencia">
+
+			</tbody>
+		</table>
+
+		<button onclick="mostrarResultados()">Mostrar Resultados</button>
+
+		<hr />
+
+		<table>
+			<tr>
+				<td>Média do custo do produto:</td>
+				<td id="rMedia"></td>
+			</tr>
+			<tr>
+				<td>Mediana:</td>
+				<td id="rMediana"></td>
+			</tr>
+			<tr>
+				<td>Classe modal:</td>
+				<td id="rClasseModal"></td>
+			</tr>
+			<tr>
+				<td>Moda bruta:</td>
+				<td id="rModaBruta"></td>
+			</tr>
+			<tr>
+				<td>Moda conforme Czuber:</td>
+				<td id="rModaCzuber"></td>
+			</tr>
+		</table>
+
+	</body>
+</html>
